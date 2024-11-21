@@ -10,6 +10,7 @@ import ProfileScreen from './Screens/ProfileScreen';
 import TestingScreen from './Screens/TestingScreen';
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Tes02 from './Screens/Tes02';
 
 
 
@@ -24,7 +25,9 @@ export default function App() {
     return (
       <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}>
         <Tab.Screen name="Home" component={HomeScreen} 
+        screenOptions={{headerShown:false}}
           options={{
+
             tabBarIcon:({focused})=>(
               <View>
                 <FontAwesome name='home' size={24} color='#000'/>
@@ -40,6 +43,13 @@ export default function App() {
           )
         }}/>
         <Tab.Screen name="Testing" component={TestingScreen} options={{
+          tabBarIcon:({focused})=>(
+            <View>
+            <FontAwesome name='code' size={24} color='#000'/>
+            </View>
+          )
+        }}/>
+        <Tab.Screen name="Test02" component={Tes02} options={{  
           tabBarIcon:({focused})=>(
             <View>
             <FontAwesome name='code' size={24} color='#000'/>
